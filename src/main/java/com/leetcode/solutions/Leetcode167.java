@@ -31,7 +31,7 @@ public class Leetcode167 {
 
     public static void main(String[] args) {
         Leetcode167 leetcode167 = new Leetcode167();
-        int[] num = new int[] {2,7,11,15};
+        int[] num = new int[]{2, 7, 11, 15};
         int[] result = leetcode167.twoSum(num, 9);
         for (int i = 0; i < result.length; i++) {
             System.out.print(result[i] + " ");

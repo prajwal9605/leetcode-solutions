@@ -17,8 +17,8 @@ public class Leetcode36 {
         boolean isValid = true;
         outer1:
         for (int i = 0; i < 9; i++) {
-            boolean digitsPresentInRow[] = new boolean[10];
-            boolean digitsPresentInColumn[] = new boolean[10];
+            boolean[] digitsPresentInRow = new boolean[10];
+            boolean[] digitsPresentInColumn = new boolean[10];
             for (int j = 0; j < 9; j++) {
                 int row = i, column = j;
                 if (board[row][column] != '.') {
@@ -48,11 +48,11 @@ public class Leetcode36 {
             return isValid;
         }
 
-        int range[][] = new int[][]{{0, 2}, {3, 5}, {6, 8}};
+        int[][] range = new int[][]{{0, 2}, {3, 5}, {6, 8}};
         outer2:
         for (int i = 0; i < range.length; i++) {
             for (int j = 0; j < range.length; j++) {
-                boolean digitsPresentInGrid[] = new boolean[10];
+                boolean[] digitsPresentInGrid = new boolean[10];
                 for (int r = range[i][0]; r <= range[i][1]; r++) {
                     for (int c = range[j][0]; c <= range[j][1]; c++) {
                         if (board[r][c] != '.') {
@@ -70,6 +70,12 @@ public class Leetcode36 {
         }
         return isValid;
     }
+
+    /*
+    Solution:
+    Space complexity O(m*n) where m and n are the dimensions of the board.
+    Time complexity O(m*n)
+     */
 
     public static void main(String[] args) {
         Leetcode36 leetcode36 = new Leetcode36();

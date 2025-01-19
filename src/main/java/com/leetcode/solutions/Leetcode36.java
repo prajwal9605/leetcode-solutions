@@ -73,7 +73,7 @@ public class Leetcode36 {
 
     /*
     Solution:
-    Space complexity O(m*n) where m and n are the dimensions of the board.
+    Space complexity O(1) as we use a boolean array of fixed size.
     Time complexity O(m*n)
      */
 
